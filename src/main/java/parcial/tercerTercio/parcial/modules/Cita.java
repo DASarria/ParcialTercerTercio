@@ -11,7 +11,7 @@ public class Cita {
     String id;
     String fecha;
     Speciality especialidadSeleccionada;
-    User doctor;
+    String doctorId;
     String correoUser;
 
     public String getCorreoUser() {
@@ -30,7 +30,7 @@ public class Cita {
         this.id = UUID.randomUUID().toString();
         this.especialidadSeleccionada = cita.especialidadSeleccionada;
         this.fecha = cita.fecha;
-        this.doctor = cita.doctor;
+        this.doctorId = cita.doctorId;
         this.correoUser=cita.correoUser;
     }
 
@@ -58,12 +58,12 @@ public class Cita {
         this.especialidadSeleccionada = especialidadSeleccionada;
     }
 
-    public User getDoctor() {
-        return doctor;
+    public String getDoctor() {
+        return doctorId;
     }
 
-    public void setDoctor(User doctor) {
-        this.doctor = doctor;
+    public void setDoctor(String doctorId) {
+        this.doctorId = doctorId;
     }
 }
 

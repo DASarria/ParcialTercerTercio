@@ -31,6 +31,12 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.OK).body(searched);
     }
 
+    @GetMapping("/correo/{correo}")
+    public ResponseEntity<User> searchUserByCorreo(@PathVariable String correo){
+        User searched = uService.searchUserByCorreo(correo);
+        return ResponseEntity.status(HttpStatus.OK).body(searched);
+    }
+
     @GetMapping
     public List<User> consultarUsuarios() {
         return uService.consultarDatos();
